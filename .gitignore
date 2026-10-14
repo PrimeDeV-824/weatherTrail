@@ -1,4 +1,23 @@
+# Environment & Secrets
 .env
+.env.local
+.env.*.local
+
+# Presentations & Scratch Slides
+*.pdf
+*.pptx
+*.ppt
+~$*.pptx
+rendered_slides/
+presentation_assets/
+scripts/build_presentation.js
+scripts/extract_pdf.js
+scripts/process_images.js
+scripts/test_*.js
+
+# Dependencies & System
 node_modules/
 .DS_Store
 Thumbs.db
+desktop.ini
+*.log

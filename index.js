@@ -20,7 +20,8 @@ import {
 } from "./js/warningEngine.js";
 import {
   generateTravelWeatherBrief,
-  askAssistantQuestion
+  askAssistantQuestion,
+  formatMarkdownToHtml
 } from "./js/aiAssistant.js";
 import {
   buildCanonicalSnapshot,
@@ -70,6 +71,8 @@ const aiQuestionInput = document.getElementById("aiQuestionInput");
 const btnAskAi = document.getElementById("btnAskAi");
 const chatAnswerBox = document.getElementById("chatAnswerBox");
 const chatAnswerText = document.getElementById("chatAnswerText");
+const chatAnswerContent = document.getElementById("chatAnswerContent");
+const btnCopyAnswer = document.getElementById("btnCopyAnswer");
 const tourismSection = document.getElementById("tourismSection");
 const attractionsGrid = document.getElementById("attractionsGrid");
 const attractionsSourceBadge = document.getElementById("attractionsSourceBadge");
@@ -596,23 +599,83 @@ btnVerifyHash.addEventListener("click", async () => {
    INTERACTIVE AI CHAT ASSISTANT
    ============================================================ */
 
+let lastAiAnswerRaw = "";
+
 btnAskAi.addEventListener("click", async () => {
   const question = aiQuestionInput.value.trim();
   if (!question) return;
 
   chatAnswerBox.style.display = "block";
-  chatAnswerText.textContent = "Analyzing forecast data...";
+  btnAskAi.disabled = true;
+  btnAskAi.textContent = "⏳...";
 
-  const answer = await askAssistantQuestion(
-    question,
-    currentCityName,
-    currentDetailedForecast,
-    currentAttractions,
-    currentRiskEvaluation
-  );
+  const targetElem = chatAnswerContent || chatAnswerText;
+  if (targetElem) {
+    targetElem.innerHTML = `
+      <div class="chatLoading">
+        <span class="chatSpinner">✨</span>
+        <span>Consulting travel intelligence for <strong>${currentCityName || "destination"}</strong>...</span>
+      </div>
+    `;
+  }
 
-  chatAnswerText.textContent = answer;
+  try {
+    const answer = await askAssistantQuestion(
+      question,
+      currentCityName,
+      currentDetailedForecast,
+      currentAttractions,
+      currentRiskEvaluation
+    );
+
+    lastAiAnswerRaw = answer;
+    const formattedHtml = formatMarkdownToHtml(answer);
+
+    if (chatAnswerContent) {
+      chatAnswerContent.innerHTML = formattedHtml;
+    } else if (chatAnswerText) {
+      chatAnswerText.innerHTML = formattedHtml;
+    }
+  } catch (err) {
+    console.error("AI question asking failed:", err);
+    if (chatAnswerContent) {
+      chatAnswerContent.innerHTML = `<p class="aiParagraph" style="color: #c9184a;">⚠️ Unable to retrieve travel answer right now. Please try again.</p>`;
+    }
+  } finally {
+    btnAskAi.disabled = false;
+    btnAskAi.textContent = "ASK";
+  }
 });
+
+if (btnCopyAnswer) {
+  btnCopyAnswer.addEventListener("click", async () => {
+    if (!lastAiAnswerRaw) return;
+    try {
+      await navigator.clipboard.writeText(lastAiAnswerRaw);
+      const originalText = btnCopyAnswer.textContent;
+      btnCopyAnswer.textContent = "✅ Copied!";
+      btnCopyAnswer.style.background = "#d8f3dc";
+      setTimeout(() => {
+        btnCopyAnswer.textContent = originalText;
+        btnCopyAnswer.style.background = "";
+      }, 2000);
+    } catch {
+      alert("Unable to copy to clipboard.");
+    }
+  });
+}
+
+if (chatAnswerBox) {
+  chatAnswerBox.addEventListener("click", (e) => {
+    const btn = e.target.closest(".switchCityBtn");
+    if (btn && btn.dataset.city) {
+      const targetCity = btn.dataset.city;
+      cityInput.value = targetCity;
+      handleCitySearch(targetCity);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+}
 
 aiQuestionInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {

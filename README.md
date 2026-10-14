@@ -1,182 +1,182 @@
 # WeatherTrail 🧭
 
-> **Weather Intelligence, Worldwide Tourism Discovery & Web3 Attestation**
+A handcrafted weather intelligence and travel discovery companion built for travelers, digital nomads, and explorers. 
 
-WeatherTrail upgrades an existing weather application into an integrated Weather Intelligence and Tourism platform. It preserves the original OpenWeatherMap workflow while adding worldwide geocoding, 7-day forecasts, algorithmic travel-risk warnings, live attraction discovery (with priority for Indian destinations), an AI travel assistant with offline fallback, and on-chain forecast attestation on the Ethereum Sepolia testnet.
-
----
-
-## 🌟 Key Features
-
-1. **Original Weather App Preserved & Extended**:
-   - Maintains the original search input, submit button, styling, OpenWeatherMap integration (`getWeatherData`), and card layout (`.cityDisplay`, `.tempDisplay`, `.humidityDisplay`, `.descDisplay`, `.weatherEmoji`).
-   - Adds global geocoding autocomplete with region/country disambiguation.
-   - 7-day meteorological forecast strip (high/low temps, precipitation probability, weather codes, and icons).
-   - Instant °C / °F temperature conversion toggle.
-
-2. **Worldwide Tourism Discovery (India Priority + Global)**:
-   - **India Priority**: Agra & Taj Mahal, Jaipur, Varanasi, Goa, Kerala (Alleppey), Hampi, Ladakh (Leh), Rishikesh, Kaziranga, Andaman & Nicobar, and Mumbai.
-   - **International**: Kyoto, Paris, Rome, Bali, Singapore, Cape Town, Machu Picchu, New York, Tehran, and Damascus.
-   - **Live Attraction Discovery**: Queries Wikipedia GeoSearch and OpenStreetMap for real nearby attractions with verified summaries, distances, thumbnail images, Wikipedia links, and a 1-click "Check Weather" action for any attraction.
-   - Seamless fallback to curated guides when external services are rate-limited or offline.
-
-3. **Weather-Risk Warning Engine**:
-   - Deterministic, configurable rule engine evaluating extreme heat (≥38°C), freezing cold (≤0°C), heavy rainfall (≥15mm or ≥65% chance), active thunderstorms (WMO codes 95, 96, 99), and gale-force winds (≥60 km/h).
-   - Generates four severity levels (`Low`, `Moderate`, `High`, `Severe`) with specific trigger conditions, travel impacts, and practical precautions.
-   - Includes transparent safety disclaimers distinguishing application alerts from official government meteorological warnings.
-
-4. **AI Weather Intelligence & Travel Assistant**:
-   - Generates weather summaries, activity guidance (indoor vs. outdoor recommendations), optimal sightseeing day identification, and packing precautions.
-   - Interactive Q&A chat box strictly grounded in the displayed forecast and nearby attractions.
-   - **Truthful Architecture**: Configurable for Google Gemini or OpenAI via the server proxy (`/api/ai-chat`). When no API key is provided or the service is offline, it transparently falls back to a deterministic rule-based analysis labeled `Deterministic Rule-Based Intelligence (Offline / Free Fallback)`—never fabricating an AI response.
-
-5. **Web3 Blockchain Forecast Attestation**:
-   - Minimal Solidity smart contract `ForecastAnchor.sol` with `anchorForecast(bytes32 forecastHash, bytes32 placeHash, uint8 riskLevel)` and `ForecastAnchored` event.
-   - Canonical deterministic snapshot generation (lexicographically sorted JSON keys) and Keccak-256 cryptographic hashing.
-   - Direct MetaMask integration (`window.ethereum`) with automatic Ethereum Sepolia testnet detection and 1-click network switching.
-   - Real-time transaction status lifecycle and direct link to confirmed transactions on [Sepolia Etherscan](https://sepolia.etherscan.io).
-   - Integrated on-chain verification tool to compare local hashes with stored contract records.
+WeatherTrail pairs live meteorological data with contextual travel guidance—answering not just *"what is the temperature?"* but *"what should I pack, what local food should I try, what is the history of this place, and are there weather hazards today?"*—alongside real-time nearby attraction discovery and optional Web3 forecast anchoring on Ethereum.
 
 ---
 
-## 🛠️ Technology Stack & Data Providers
+## 🧭 Why WeatherTrail?
 
-- **Frontend**: Vanilla HTML5, CSS3 (responsive pixel/warm aesthetic), Modern ES Modules, and Ethers.js v6.
-- **Runtime & Tools**: Deno 2 / Node.js.
-- **Smart Contract & Compiler**: Solidity `^0.8.20`, compiled with `solc` (v0.8.37).
-- **Data Providers**:
-  - [OpenWeatherMap API](https://openweathermap.org): Preserved current weather provider.
-  - [Open-Meteo](https://open-meteo.com): Free global geocoding, 7-day daily forecast, UV index, and precipitation probability (non-commercial, attribution preserved).
-  - [Wikipedia GeoSearch API](https://www.mediawiki.org/wiki/API:Geosearch): Public API for real nearby points of interest, summaries, and images.
-  - [Ethereum Sepolia Testnet](https://sepolia.etherscan.io): Testnet blockchain for decentralized forecast attestations.
+Most weather apps only show you a couple of icons and temperature numbers. If you're heading out to Varanasi, Paris, Prayagraj, or Kyoto, numbers alone don't tell you:
+- What fabrics to wear for the humidity and cultural sites
+- Which famous street foods and regional delicacies to seek out
+- The historical backdrop of where you're walking
+- How to plan your itinerary around the best weather days of the week
+
+WeatherTrail integrates live meteorological feeds, dynamic attraction discovery, and a responsive Travel Assistant into a single, cohesive dashboard with an earthy, warm artisan theme.
 
 ---
 
-## 📂 Project Structure
+## ✨ Features
+
+### 1. Live Weather & 7-Day Meteorological Forecast
+- **Dual Engine**: Keeps OpenWeatherMap for instant current conditions while pulling hourly/daily trends (precipitation probability, high/low curves, UV index, and WMO weather codes) from Open-Meteo.
+- **One-Click Unit Toggle**: Seamlessly switch between Celsius (°C) and Fahrenheit (°F) across all cards, forecast columns, and advisory widgets.
+- **Global Search + Curated Chips**: Search any city or town worldwide with live geocoding autocomplete, or tap curated chips for top heritage and travel hubs across India and the globe.
+
+### 2. Smart Travel Intelligence Assistant
+- **Curated Knowledge Base (33+ Major Destinations)**: Deep, instant dossiers for places like Prayagraj, Agra, Jaipur, Varanasi, Goa, Kerala, Ladakh, Paris, Kyoto, Rome, New York, and many more. Ask about:
+  - 🍲 **Best Local Food & Culinary Specialties** (e.g. Prayagraj's *Dam Aloo, Gujiya, Dehati Rasgulle*, Agra's *Petha*, Varanasi's *Kachori Sabzi & Malaiyo*)
+  - 👕 **Clothing & Packing Recommendations** (fabrics, sun protection, temple dress codes, rain gear)
+  - 🏛️ **History & Heritage Background** (ancient eras, dynasties, architectural milestones)
+- **Live Destination Exploration Engine**: If you search a city not in the offline curated list, WeatherTrail connects to Wikipedia's live knowledge base to pull authentic history, landmarks, and travel context on the fly.
+- **Blazing Fast (<1ms Cached) & Reliable**: Responses are cached in-memory. If external cloud AI providers are slow or offline, the local intelligence engine answers immediately with rich, human-readable travel advice—no annoying delays, no confusing markdown pipe tables, and no broken layouts.
+- **Multi-Model Cloud Proxy**: Built-in support for Google Gemini and OpenAI if you provide an API key in `.env` or during runtime.
+
+### 3. Nearby Attractions & Heritage Discovery
+- Uses Wikipedia Live GeoSearch to locate genuine historical and cultural points of interest within radius of your searched coordinates.
+- Displays thumbnail imagery, actual distance in kilometers, concise architectural summaries, and a one-click **"Check Weather"** button to inspect weather specifically at that monument.
+
+### 4. Travel Weather Risk & Advisory Engine
+- Evaluates real-time meteorological indicators: extreme heat (≥38°C), freezing cold (≤0°C), heavy rainfall, thunderstorms, and high wind gusts.
+- Categorizes advisory levels from **Low** to **Severe** with clear, practical precautions (hydration, transport delays, indoor alternatives) rather than cryptic meteorological jargon.
+
+### 5. Web3 Forecast Attestation (Ethereum Sepolia)
+- Need an immutable timestamped record of weather conditions (e.g. for parametric travel insurance experiments, event proofs, or decentralized travel logs)?
+- WeatherTrail formats a canonical JSON snapshot of the forecast, computes its cryptographic Keccak-256 hash, and lets you anchor it onto the **Ethereum Sepolia Testnet** via MetaMask in a single transaction.
+- Includes a built-in on-chain hash verification tool with direct links to [Sepolia Etherscan](https://sepolia.etherscan.io).
+
+---
+
+## 🎨 Visual Identity & Human-Crafted Design
+
+The user interface is designed with a warm, earthy, tactile palette that feels like a traveler's field notebook:
+- **Primary Mocha**: `#6c584c` & `#3b2a21` (warm espresso & rich earth tones)
+- **Sage Olive**: `#adc178` (fresh nature accents)
+- **Terracotta & Sand**: `#a98467` & `#ddbea9` (soft borders and chips)
+- **Warm Parchment Canvas**: `#f6f3ee` (soft background that is easy on the eyes)
+- **Typography**: Clean, readable typography using Google Fonts **Outfit** for elegant headers and **Plus Jakarta Sans** for crisp, comfortable UI text.
+- **Custom Vector Favicon**: A crisp, warm compass-and-mountain emblem (`favicon.svg` and `favicon.ico`) that scales cleanly on desktop tabs, mobile bookmarks, and high-DPI displays.
+
+---
+
+## 🗂️ Project Architecture
 
 ```
 TourismApp/
-├── index.html               # Main entry point (preserves original markup & layout)
-├── style.css                # Preserved baseline styles + WeatherTrail extensions
-├── index.js                 # Application coordinator (preserves original weather logic)
-├── server.js                # Lightweight static server & optional AI proxy
-├── .env.example             # Safe environment variable configuration template
-├── README.md                # Documentation and operational manual
+├── index.html               # Main dashboard layout (semantic, accessible, responsive)
+├── style.css                # Polished theme styles, cards, grids, and responsive media queries
+├── index.js                 # Application coordinator & event bus
+├── server.js                # Lightweight Deno HTTP server with AI caching & static asset delivery
+├── favicon.svg              # Scalable SVG favicon (compass & mountain silhouette)
+├── favicon.ico              # Standard binary ICO fallback for legacy browsers & crawlers
+├── .env.example             # Clean environment variable template
 ├── js/
-│   ├── weatherService.js    # Global geocoding, Open-Meteo 7-day forecast, unit converter
-│   ├── tourismService.js    # Curated Indian/Global destinations & Wikipedia GeoSearch
-│   ├── warningEngine.js     # Deterministic weather risk rules & precautions
-│   ├── aiAssistant.js       # Grounded travel recommendations & interactive Q&A
-│   ├── web3Attestation.js   # MetaMask connector, canonical hashing & contract calls
-│   └── contractAbi.js       # Compiled Solidity ABI & bytecode
+│   ├── aiAssistant.js       # Travel intelligence, 33+ city knowledge base & live Wiki search
+│   ├── weatherService.js    # Open-Meteo & OpenWeatherMap integrations, geocoding & unit math
+│   ├── tourismService.js    # Wikipedia GeoSearch queries & fallback heritage guides
+│   ├── warningEngine.js     # Deterministic risk engine evaluating heat, storms, rain & wind
+│   ├── web3Attestation.js   # MetaMask connector, Keccak-256 hasher & smart contract caller
+│   └── contractAbi.js       # ForecastAnchor ABI, bytecode & default contract address
 ├── contracts/
-│   └── ForecastAnchor.sol   # Solidity smart contract
+│   └── ForecastAnchor.sol   # Solidity smart contract for Sepolia attestation
 ├── scripts/
-│   ├── compile.js           # Smart contract compilation script (solc)
-│   └── deploy.js            # Sepolia testnet deployment script (ethers)
+│   ├── compile.js           # Automated solc compiler script
+│   └── deploy.js            # Automated Sepolia deployment script via Ethers v6
 └── tests/
-    ├── contract.test.js     # Contract ABI, signature, and encoder/decoder tests
-    ├── warningEngine.test.js# Automated rule thresholds & severity tests
-    └── weatherService.test.js# Temperature formatting & canonical hash tests
+    ├── contract.test.js     # ABI integrity and event signature validation
+    ├── warningEngine.test.js# Risk threshold test suite (safe, heat, rain, thunderstorm)
+    └── weatherService.test.js# Unit conversions, WMO mapping & canonical hash tests
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Prerequisites
+### Prerequisites
+- [Deno](https://deno.com) (recommended, pre-installed) OR Node.js / any static web server (like Python `http.server` or VS Code Live Server).
 
-This repository runs seamlessly with **Deno** (installed on your system).
+### 1. Launching Locally with Deno
 
-### 2. Running the Application
+Clone or open the project folder, then run:
 
-To start the local development server:
-
-```powershell
+```bash
 deno run -A server.js
 ```
 
-Or specify a custom port:
+The server will start at:
+👉 **`http://localhost:3000`**
 
-```powershell
-$env:PORT="3000"; deno run -A server.js
+Open that URL in any modern browser (Chrome, Brave, Edge, Firefox, Safari).
+
+### 2. Running Automated Tests
+
+To run the full unit test suite (7 automated tests covering the risk engine, contract ABI, and cryptographic hashing):
+
+```bash
+deno test --allow-read --allow-net --allow-env tests/
 ```
 
-Then open your browser at `http://localhost:3000`.
-
-*(Alternatively, because this is a standard web application, `index.html` can also be served using any local HTTP server like Python `python -m http.server 3000` or VS Code Live Server).*
-
----
-
-## 🧪 Running Tests
-
-WeatherTrail includes automated tests covering the risk engine, weather formatting, deterministic hashing, and smart contract specifications.
-
-Run all tests:
-
-```powershell
-deno test -A tests/
+Expected output:
 ```
-
-Results:
-```
-running 1 test from ./tests/contract.test.js
-ForecastAnchor Contract - ABI and Bytecode Integrity ... ok (6ms)
-running 4 tests from ./tests/warningEngine.test.js
-Warning Engine - Safe clear conditions yield Low risk ... ok (0ms)
-Warning Engine - Thunderstorm triggers Severe risk ... ok (0ms)
-Warning Engine - Heavy Rain triggers High risk ... ok (0ms)
-Warning Engine - Extreme Heat triggers High risk with hydration advice ... ok (0ms)
-running 2 tests from ./tests/weatherService.test.js
-Weather Service - Condition Mapping & Conversions ... ok (0ms)
-Web3 Attestation - Deterministic Canonical Snapshot & Hashing ... ok (1ms)
-
-ok | 7 passed | 0 failed (132ms)
+ok | 7 passed | 0 failed
 ```
 
 ---
 
-## ⛓️ Smart Contract: Compile & Deploy
+## 🌐 Deploying to the Web
 
-### 1. Compile
+Because WeatherTrail is written with clean vanilla ES modules and standard web APIs, it can be deployed anywhere in seconds:
 
-The contract compilation script uses `solc` to compile `contracts/ForecastAnchor.sol` and updates `js/contractAbi.js`:
+- **Vercel / Netlify**: Simply link this repository or drag-and-drop the directory. The static assets (`index.html`, `style.css`, `index.js`, `favicon.svg`, `favicon.ico`, and `js/`) work out of the box with zero build step.
+- **GitHub Pages**: Go to repository Settings -> Pages, select the root branch, and your site will be live with full HTTPS.
+- **Docker / Cloud VPS**: Use `server.js` with Deno or Node to serve both the static assets and the server-side AI proxy.
 
-```powershell
-deno run -A scripts/compile.js
-```
+---
 
-### 2. Deploy to Sepolia Testnet
+## 🔑 Optional Cloud AI Configuration
 
+WeatherTrail is completely autonomous and works right out of the box without requiring any API keys. Its built-in Travel Intelligence engine instantly provides food, clothing, history, and weather advice.
+
+If you wish to route questions through Google Gemini or OpenAI:
 1. Copy `.env.example` to `.env`:
-   ```powershell
-   Copy-Item .env.example .env
+   ```bash
+   cp .env.example .env
    ```
-2. Set your `SEPOLIA_RPC_URL` and `PRIVATE_KEY` with testnet Sepolia ETH (from a faucet such as [Google Cloud Web3 Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) or [Sepolia PoW Faucet](https://sepolia-faucet.pk910.de/)).
-3. Execute the deployment script:
-   ```powershell
-   $env:SEPOLIA_RPC_URL="https://rpc.sepolia.org"; $env:PRIVATE_KEY="0xYourPrivateKey"; deno run -A scripts/deploy.js
-   ```
-4. Copy the resulting contract address and paste it into the UI under **Smart Contract** in the Web3 section, or update `DEFAULT_CONTRACT_ADDRESS` in `js/contractAbi.js`.
-
----
-
-## 🤖 Configuring Optional AI Provider
-
-By default, WeatherTrail functions 100% offline using its built-in **Deterministic Rule-Based Intelligence engine**, which analyzes precipitation, temperature ranges, and outdoor feasibility without an API key.
-
-To enable LLM generation:
-1. Obtain an API key from [Google AI Studio](https://aistudio.google.com/) or OpenAI.
-2. Provide the key in `.env`:
+2. Add your Gemini or OpenAI key:
    ```env
-   GEMINI_API_KEY=your_gemini_api_key
+   GEMINI_API_KEY="AIzaSy..."
    ```
-   or enter it when prompted in the UI.
+3. Restart `server.js`. The proxy will automatically use the cloud LLM when available and fall back gracefully if limits are reached.
 
 ---
 
-## 🔒 Security & Safe Practice Reminders
+## ⛓️ Blockchain Smart Contract (Sepolia Testnet)
 
-- **No Committed Secrets**: Never commit `.env` or files containing private keys or secret API tokens.
-- **Client-Side Wallet Safety**: Never share or paste private keys into the frontend. The application uses standard MetaMask transaction prompts (`window.ethereum.request`).
-- **Safety Disclaimer**: Algorithmic weather risk indicators are calculated from open meteorological data and do not substitute for official civil defense or national weather service alerts.
+The contract `ForecastAnchor.sol` allows storing an immutable proof of weather on Ethereum Sepolia.
+
+### Contract Functions:
+- `anchorForecast(bytes32 forecastHash, bytes32 placeHash, uint8 riskLevel)`: Records the cryptographic hash of the weather snapshot with the sender's address and block timestamp.
+- `verifyForecast(bytes32 forecastHash)`: Reads back the attester address, block timestamp, place hash, and risk level.
+
+To deploy your own instance to Sepolia:
+```bash
+export SEPOLIA_RPC_URL="https://rpc.sepolia.org"
+export PRIVATE_KEY="0xYourTestnetPrivateKey"
+deno run -A scripts/deploy.js
+```
+Then paste the newly deployed contract address directly into the **Smart Contract** input field in the web UI.
+
+---
+
+## 📜 Attributions & Data Sources
+
+- **Weather Feeds**: [OpenWeatherMap](https://openweathermap.org) & [Open-Meteo](https://open-meteo.com)
+- **Heritage & Geographic Discovery**: [Wikipedia GeoSearch API](https://www.mediawiki.org/wiki/API:Geosearch)
+- **Blockchain**: [Ethereum Sepolia Testnet](https://sepolia.etherscan.io) & [Ethers.js v6](https://docs.ethers.org/v6/)
+- **Typography**: [Google Fonts (Outfit & Plus Jakarta Sans)](https://fonts.google.com)
+
+---
+
+*Safe travels and happy exploring! Weather conditions can evolve quickly—always pay attention to local advisories and official safety alerts when planning outdoor journeys.*

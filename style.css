@@ -3,31 +3,30 @@
    ============================================================ */
 
 body {
-  /* font-family:
-    "Shantell Sans",
-    cursive,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif; */
-  font-family: "Geist Pixel", system-ui, sans-serif;
-
-  background-color: hsla(0, 0%, 0%, 0.329);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  background: #f6f3ee linear-gradient(180deg, #f9f6f2 0%, #ede6dc 100%);
+  background-attachment: fixed;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: #6c584c;
+  justify-content: flex-start;
+  color: #3b2a21;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+h1,
+h2,
+h3,
+h4,
+.brandTitle,
+.sectionTitle {
+  font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+  letter-spacing: -0.015em;
+}
+
 .weatherInput {
   margin: 20px;
   display: flex;
@@ -36,34 +35,44 @@ body {
   justify-content: center;
 }
 .cityInput {
-  font-size: 2rem;
-  padding: 10px;
-  font-weight: bold;
-  border: 2px solid hsla(0, 0%, 0%, 0.351);
+  font-size: 1.8rem;
+  padding: 12px 18px;
+  font-weight: 600;
+  border: 2px solid #a98467;
+  background: #ffffff;
+  color: #2b1f17;
   margin: 10px;
-  border-radius: 15px;
-  width: 320px;
+  border-radius: 14px;
+  width: 340px;
   max-width: 90vw;
-  /* font-family: "Gluten", cursive; */
-  font-family: "Geist Pixel", system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(108, 88, 76, 0.1);
+  transition: all 0.2s ease;
+}
+.cityInput:focus {
+  outline: none;
+  border-color: #6c584c;
+  box-shadow: 0 0 0 3px rgba(173, 193, 120, 0.4);
 }
 button[type="submit"] {
-  padding: 10px 18px;
-  font-weight: bold;
-  font-size: 2rem;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 1.6rem;
   cursor: pointer;
-  background-color: hsl(122, 39%, 50%);
-  color: whitesmoke;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #adc178 0%, #8ca957 100%);
+  color: #1e2d10;
+  border-radius: 12px;
   border: none;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
-  font-family: "Geist Pixel", system-ui, sans-serif;
+  box-shadow: 0 6px 16px rgba(108, 88, 76, 0.22);
+  transition: all 0.25s ease;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  letter-spacing: 0.5px;
 }
 button:hover {
-  background-color: hsl(122, 61%, 59%);
-  scale: 1.05;
+  background: linear-gradient(135deg, #b8ce84 0%, #98b562 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 88, 76, 0.28);
 }
 .card {
   background: linear-gradient(180deg, #adc178, #a98467);
@@ -434,7 +443,20 @@ p {
 }
 
 /* AI Weather Intelligence Section */
-.aiEngineBadge,
+.aiEngineBadge {
+  background: linear-gradient(135deg, #6c584c 0%, #7f6656 100%);
+  color: #ffffff;
+  font-size: 0.95rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .dataSourceBadge,
 .networkBadge {
   background: #ddbea9;
@@ -481,10 +503,10 @@ p {
 
 .aiChatBox {
   margin-top: 16px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
   border: 1px dashed #a98467;
   border-radius: 12px;
-  padding: 16px;
+  padding: 18px;
 }
 
 .chatLabel {
@@ -502,42 +524,269 @@ p {
 
 #aiQuestionInput {
   flex: 1;
-  font-size: 1.2rem;
-  padding: 10px 14px;
-  border: 2px solid #a98467;
-  border-radius: 10px;
-  font-family: inherit;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  padding: 12px 18px !important;
+  border: 2.5px solid #5a4638 !important;
+  border-radius: 10px !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  background: #ffffff !important;
+  color: #111827 !important;
+  outline: none !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.2s ease !important;
+}
+
+#aiQuestionInput:focus {
+  border-color: #2b3a1a !important;
+  box-shadow: 0 0 0 3px rgba(173, 193, 120, 0.45) !important;
+}
+
+#aiQuestionInput::placeholder {
+  color: #4b5563 !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
 }
 
 #btnAskAi {
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: #6c584c;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: background 0.2s;
+  padding: 12px 26px !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  background: #5a4638 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
 #btnAskAi:hover {
-  background: #a98467;
+  background: #735948 !important;
+  transform: translateY(-1px) !important;
+}
+
+#btnAskAi:disabled {
+  opacity: 0.65 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
 }
 
 .chatAnswerBox {
-  margin-top: 12px;
-  background: #fdfaf6;
-  border-left: 4px solid #6c584c;
-  padding: 12px 16px;
-  border-radius: 6px;
+  margin-top: 16px !important;
+  background: #ffffff !important;
+  border: 2px solid #d4c5b9 !important;
+  border-left: 8px solid #5a4638 !important;
+  padding: 20px 24px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1) !important;
+  animation: fadeIn 0.25s ease-out !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
-.chatAnswerBox p {
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chatAnswerHeader {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 14px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1.5px solid #eee5dc !important;
+}
+
+.chatAnswerBadge {
+  background: #5a4638 !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 4px 12px !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.copyAnswerBtn {
+  background: #f4ede4 !important;
+  border: 1.5px solid #b8a598 !important;
+  color: #3b2a21 !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  padding: 5px 14px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.copyAnswerBtn:hover {
+  background: #e8dcd0 !important;
+}
+
+.chatLoading {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-size: 1.2rem !important;
+  color: #5a4638 !important;
+  font-weight: 700 !important;
+  padding: 12px 0 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.chatSpinner {
+  animation: spinPulse 1.2s infinite ease-in-out !important;
+  display: inline-block !important;
+  font-size: 1.4rem !important;
+}
+
+@keyframes spinPulse {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+  50% { transform: scale(1.25) rotate(180deg); opacity: 1; }
+  100% { transform: scale(1) rotate(360deg); opacity: 0.7; }
+}
+
+.aiHeading {
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  color: #1c1917 !important;
+  margin: 16px 0 10px 0 !important;
+  border-bottom: 2px solid #e7ded4 !important;
+  padding-bottom: 6px !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.aiParagraph {
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+  margin: 10px 0 !important;
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.aiAnswerList {
+  margin: 10px 0 16px 24px !important;
+  padding: 0 !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+  color: #1f2937 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.aiAnswerList li {
+  margin-bottom: 8px !important;
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+}
+
+.aiAnswerList li strong {
+  color: #111827 !important;
+  font-weight: 800 !important;
+}
+
+.switchCityContainer {
+  margin-top: 16px !important;
+  padding-top: 12px !important;
+  border-top: 1px dashed #d4c5b9 !important;
+}
+
+.switchCityBtn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 9px 18px !important;
+  background: #f7f3ed !important;
+  border: 1.5px solid #a98467 !important;
+  border-radius: 8px !important;
+  color: #3b2a21 !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.switchCityBtn:hover {
+  background: #adc178 !important;
+  color: #1b4332 !important;
+  border-color: #52b788 !important;
+  transform: translateY(-1px) !important;
+}
+
+.aiAnswerList {
+  margin: 8px 0 14px 22px;
+  padding: 0;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #2b2b2b;
+}
+
+.aiAnswerList li {
+  margin-bottom: 6px;
+}
+
+.aiAnswerList li strong {
+  color: #4a3b32;
+}
+
+.aiCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.aiRecommendationCard {
+  background: #faf6f0;
+  border: 1px solid #d9cbbe;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.aiRecommendationCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.aiCardTitle {
   font-size: 1.2rem;
-  margin: 0;
+  font-weight: bold;
+  color: #3b2a21;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #d8c5b7;
+  padding-bottom: 4px;
+}
+
+.aiCardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aiCardRow {
+  font-size: 1.1rem;
   line-height: 1.5;
+  color: #333333;
+}
+
+.aiCardLabel {
+  font-weight: bold;
+  color: #6c584c;
+  display: inline-block;
+  min-width: 90px;
+}
+
+.aiCardVal {
   color: #2b2b2b;
 }
 
