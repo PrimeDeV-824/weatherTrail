@@ -10,7 +10,8 @@
 ~$*.pptx
 rendered_slides/
 presentation_assets/
-scripts/build_presentation.js
+scripts/build_presentation*.js
+scripts/capture_screenshots.js
 scripts/extract_pdf.js
 scripts/process_images.js
 scripts/test_*.js
