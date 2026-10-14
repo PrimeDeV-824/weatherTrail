@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WeatherTrail — Weather Intelligence, Worldwide Tourism & Web3 Attestation</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,21 +11,174 @@
       href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Gluten:wght@100..900&family=Indie+Flower&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Sunshiney&family=Vibur&display=swap"
       rel="stylesheet"
     />
+    <!-- Ethers.js v6 for Web3 Ethereum Sepolia Attestation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
   </head>
   <body>
-    <form class="weatherInput">
-      <input type="text" class="cityInput" placeholder="Enter City" />
-      <button type="submit">GET WEATHER</button>
-    </form>
+    <header class="appHeader">
+      <div class="brand">
+        <h1 class="brandTitle">WeatherTrail 🧭</h1>
+        <p class="brandSubtitle">Weather Intelligence, Global Tourism Discovery & Web3 Attestation</p>
+      </div>
+      <div class="headerControls">
+        <div class="unitToggle">
+          <button type="button" class="unitBtn active" id="btnCelsius">°C</button>
+          <button type="button" class="unitBtn" id="btnFahrenheit">°F</button>
+        </div>
+      </div>
+    </header>
 
-    <div class="card" style="display: none">
-      <!-- <p class="tempDisplay"></p>
-    <p class="humidityDisplay"></p>
-    <p class="descDisplay"></p>
-    <p class="weatherEmoji"      <h1 class="cityDisplay"></h1>
->🌞</p>
-    <p class="errorDisplay"></p> -->
-    </div>
-    <script src="index.js"></script>
+    <!-- Original Search Form Preserved -->
+    <section class="searchSection">
+      <form class="weatherInput" autocomplete="off">
+        <div class="inputWrapper">
+          <input type="text" class="cityInput" placeholder="Enter City (e.g. Agra, Paris, Kyoto, New York)" />
+          <div class="searchSuggestions" id="searchSuggestions" style="display: none;"></div>
+        </div>
+        <button type="submit">GET WEATHER</button>
+      </form>
+
+      <!-- Quick Curated Destination Chips -->
+      <div class="curatedChipsContainer">
+        <span class="chipsLabel">Curated Destinations:</span>
+        <div class="chipsWrapper" id="curatedChips">
+          <!-- Dynamically filled with Agra, Jaipur, Varanasi, Goa, Kerala, Hampi, Ladakh, Rishikesh, Paris, Kyoto, Rome, etc. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="mainContent">
+      <!-- Original Card Preserved & Enhanced -->
+      <div class="card" style="display: none">
+        <!-- Original elements populated dynamically by index.js:
+             cityDisplay, tempDisplay, humidityDisplay, descDisplay, weatherEmoji, errorDisplay -->
+      </div>
+
+      <!-- Extended Weather Intelligence: Details & 7-Day Forecast -->
+      <section class="forecastSection" id="forecastSection" style="display: none;">
+        <h2 class="sectionTitle">7-Day Meteorological Outlook</h2>
+        <div class="forecastGrid" id="forecastGrid"></div>
+      </section>
+
+      <!-- Weather-Risk Warnings Engine -->
+      <section class="risksSection" id="risksSection" style="display: none;">
+        <div class="sectionHeaderWithBadge">
+          <h2 class="sectionTitle">Travel Weather Risk Engine</h2>
+          <span class="riskBadge" id="overallRiskBadge">Evaluating...</span>
+        </div>
+        <p class="sectionSubtext" id="riskDisclaimer">Safety notice: Algorithmic indicators from meteorological data. Verify official authority warnings for emergencies.</p>
+        <div class="warningsList" id="warningsList"></div>
+      </section>
+
+      <!-- AI Weather Intelligence & Grounded Travel Assistant -->
+      <section class="aiSection" id="aiSection" style="display: none;">
+        <div class="sectionHeaderWithBadge">
+          <h2 class="sectionTitle">AI Weather Intelligence</h2>
+          <span class="aiEngineBadge" id="aiEngineBadge">Rule-Based Analysis</span>
+        </div>
+        <div class="aiBriefCard">
+          <div class="aiItem">
+            <strong>📋 Weather Synthesis:</strong>
+            <p id="aiSummaryText">Loading summary...</p>
+          </div>
+          <div class="aiItem">
+            <strong>🎯 Activity Guidance:</strong>
+            <p id="aiActivityText">Evaluating conditions...</p>
+          </div>
+          <div class="aiItem">
+            <strong>📅 Optimal Sightseeing Days:</strong>
+            <p id="aiBestDaysText">Calculating scores...</p>
+          </div>
+          <div class="aiItem">
+            <strong>🎒 Precautions & Packing:</strong>
+            <ul id="aiPrecautionsList"></ul>
+          </div>
+        </div>
+
+        <!-- Interactive Question Asking -->
+        <div class="aiChatBox">
+          <label for="aiQuestionInput" class="chatLabel">Ask AI Assistant about this destination's weather & travel:</label>
+          <div class="chatInputRow">
+            <input type="text" id="aiQuestionInput" placeholder="e.g. When is the best day to visit the Taj Mahal? Should I carry an umbrella?" />
+            <button type="button" id="btnAskAi">ASK</button>
+          </div>
+          <div class="chatAnswerBox" id="chatAnswerBox" style="display: none;">
+            <p id="chatAnswerText"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Worldwide Tourism Discovery Section -->
+      <section class="tourismSection" id="tourismSection" style="display: none;">
+        <div class="sectionHeaderWithBadge">
+          <h2 class="sectionTitle">Nearby Attractions & Heritage Discovery</h2>
+          <span class="dataSourceBadge" id="attractionsSourceBadge">Wikipedia Live GeoSearch</span>
+        </div>
+        <p class="sectionSubtext">Real attractions located near the selected destination with coordinates, distances, and live weather inspections.</p>
+        <div class="attractionsGrid" id="attractionsGrid"></div>
+      </section>
+
+      <!-- Web3 Blockchain Forecast Attestation Section -->
+      <section class="web3Section" id="web3Section" style="display: none;">
+        <div class="sectionHeaderWithBadge">
+          <h2 class="sectionTitle">Web3 Forecast Attestation</h2>
+          <span class="networkBadge" id="web3NetworkBadge">Ethereum Sepolia</span>
+        </div>
+        <p class="sectionSubtext">
+          Anchor a cryptographic snapshot of this weather forecast on the Ethereum Sepolia testnet to provide immutable, verifiable proof of retrieved forecast parameters.
+        </p>
+
+        <div class="web3Grid">
+          <div class="web3Card">
+            <h3>Canonical Forecast Snapshot</h3>
+            <pre class="snapshotPre" id="snapshotPre">No forecast selected.</pre>
+            <div class="hashRow">
+              <span class="hashLabel">Calculated Keccak-256 Hash:</span>
+              <code class="hashCode" id="calculatedHashText">--</code>
+            </div>
+            <div class="hashRow">
+              <span class="hashLabel">Destination Hash:</span>
+              <code class="hashCode" id="placeHashText">--</code>
+            </div>
+          </div>
+
+          <div class="web3Card">
+            <h3>On-Chain Attestation Controls</h3>
+            <div class="walletControls">
+              <button type="button" class="web3Btn" id="btnConnectWallet">🦊 Connect MetaMask</button>
+              <button type="button" class="web3Btn anchorBtn" id="btnAnchorForecast" disabled>🔗 Record Forecast on Blockchain</button>
+            </div>
+            <div class="walletInfoRow">
+              <span>Connected Wallet:</span>
+              <strong id="walletAddressText">Disconnected</strong>
+            </div>
+            <div class="walletInfoRow">
+              <span>Smart Contract:</span>
+              <input type="text" id="contractAddressInput" class="contractInput" placeholder="Contract address (0x...)" />
+            </div>
+            <div class="txStatusBox" id="txStatusBox">
+              <span class="txStatusLabel">Status:</span>
+              <span class="txStatusText" id="txStatusText">Ready to connect</span>
+              <div id="txExplorerLinkContainer" style="margin-top: 8px;"></div>
+            </div>
+
+            <!-- Verification Tool -->
+            <div class="verificationTool">
+              <button type="button" class="smallBtn" id="btnVerifyHash">🔍 Verify Hash On-Chain</button>
+              <div id="verificationResult" class="verificationResult" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="appFooter">
+      <p>WeatherTrail © 2026 • Powered by OpenWeatherMap, Open-Meteo, Wikipedia & Ethereum Sepolia Testnet</p>
+      <p class="footerDisclaimer">For educational and exploratory travel intelligence. Weather conditions can change rapidly; always observe local safety directives.</p>
+    </footer>
+
+    <!-- Preserved Entry Point as ES Module -->
+    <script type="module" src="index.js"></script>
   </body>
 </html>
