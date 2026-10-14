@@ -37,11 +37,34 @@ async function handleRequest(req) {
       const activeOpenAIKey = OPENAI_API_KEY;
 
       if (!activeGeminiKey && !activeOpenAIKey) {
+        // Use free cloud AI service (no API key required)
+        try {
+          const freeAiUrl = `https://text.pollinations.ai/${encodeURIComponent(prompt)}`;
+          const freeRes = await fetch(freeAiUrl, {
+            headers: { "User-Agent": "WeatherTrail/1.0" }
+          });
+          if (freeRes.ok) {
+            const aiText = await freeRes.text();
+            if (aiText && aiText.trim().length > 0) {
+              return new Response(
+                JSON.stringify({
+                  result: aiText.trim(),
+                  configured: true,
+                  provider: "Free Cloud AI Engine"
+                }),
+                { headers: { "Content-Type": "application/json" } }
+              );
+            }
+          }
+        } catch (freeErr) {
+          console.warn("Free cloud AI notice:", freeErr.message);
+        }
+
         return new Response(
           JSON.stringify({
             result: null,
             configured: false,
-            message: "No AI API key configured on server or client. Truthfully using deterministic rule engine."
+            message: "No AI API key configured and cloud service unreachable."
           }),
           { headers: { "Content-Type": "application/json" } }
         );
