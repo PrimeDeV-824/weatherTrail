@@ -109,10 +109,25 @@ weatherForm.addEventListener("submit", async (event) => {
    ORIGINAL WEATHER FUNCTIONS (PRESERVED EXACTLY)
    ============================================================ */
 
-async function getWeatherData(city) {
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
-    city
-  )}&appid=${apiKey}`;
+const CITY_ALIASES = {
+  prayagraj: "Allahabad",
+  ayodhya: "Faizabad",
+  bengaluru: "Bangalore",
+  puducherry: "Pondicherry",
+  matheran: "Matheran"
+};
+
+async function getWeatherData(city, lat = null, lon = null) {
+  let apiUrl = "";
+  if (lat !== null && lon !== null) {
+    apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  } else {
+    const norm = (city || "").toLowerCase().trim();
+    const resolvedName = CITY_ALIASES[norm] || city;
+    apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
+      resolvedName
+    )}&appid=${apiKey}`;
+  }
   const response = await fetch(apiUrl);
 
   if (!response.ok) {
@@ -122,7 +137,7 @@ async function getWeatherData(city) {
   return await response.json();
 }
 
-function displayWeatherInfo(data) {
+function displayWeatherInfo(data, overrideCityName = null) {
   console.log(data);
   const {
     name: city,
@@ -144,7 +159,7 @@ function displayWeatherInfo(data) {
   const descDisplay = document.createElement("p");
   const weatherEmoji = document.createElement("p");
 
-  cityDisplay.textContent = city;
+  cityDisplay.textContent = overrideCityName || city;
   cityDisplay.classList.add("cityDisplay");
   card.appendChild(cityDisplay);
 
@@ -162,6 +177,37 @@ function displayWeatherInfo(data) {
   card.appendChild(descDisplay);
 
   weatherEmoji.textContent = displayEmoji(id);
+  weatherEmoji.classList.add("weatherEmoji");
+  card.appendChild(weatherEmoji);
+}
+
+function displayWeatherInfoFromCurrent(cityName, current) {
+  card.textContent = "";
+  card.style.display = "flex";
+
+  const cityDisplay = document.createElement("h1");
+  const tempDisplay = document.createElement("p");
+  const humidityDisplay = document.createElement("p");
+  const descDisplay = document.createElement("p");
+  const weatherEmoji = document.createElement("p");
+
+  cityDisplay.textContent = cityName;
+  cityDisplay.classList.add("cityDisplay");
+  card.appendChild(cityDisplay);
+
+  tempDisplay.textContent = formatTemp(current.temp, currentUnit);
+  tempDisplay.classList.add("tempDisplay");
+  card.appendChild(tempDisplay);
+
+  humidityDisplay.textContent = `Humidity: ${Math.round(current.humidity)}%`;
+  humidityDisplay.classList.add("humidityDisplay");
+  card.appendChild(humidityDisplay);
+
+  descDisplay.textContent = current.description;
+  descDisplay.classList.add("descDisplay");
+  card.appendChild(descDisplay);
+
+  weatherEmoji.textContent = current.emoji || "⛅";
   weatherEmoji.classList.add("weatherEmoji");
   card.appendChild(weatherEmoji);
 }
@@ -215,10 +261,12 @@ async function handleCitySearch(query, preferredCoords = null) {
   currentCityName = query;
 
   let owmSucceeded = false;
-  // Step 1: Execute original OpenWeatherMap display
+  // Step 1: Execute OpenWeatherMap search (by name or preferred coordinates)
   try {
-    const weatherData = await getWeatherData(query);
-    displayWeatherInfo(weatherData);
+    const weatherData = preferredCoords
+      ? await getWeatherData(query, preferredCoords.lat, preferredCoords.lon)
+      : await getWeatherData(query);
+    displayWeatherInfo(weatherData, query);
     owmSucceeded = true;
   } catch (err) {
     console.warn("OpenWeatherMap direct search note:", err);
@@ -239,6 +287,17 @@ async function handleCitySearch(query, preferredCoords = null) {
     }
   }
 
+  // If initial OWM failed but we now have coordinates, query OWM by coordinates
+  if (!owmSucceeded && lat && lon) {
+    try {
+      const weatherData = await getWeatherData(query, lat, lon);
+      displayWeatherInfo(weatherData, query);
+      owmSucceeded = true;
+    } catch (errCoords) {
+      console.warn("OpenWeatherMap coordinate fallback note:", errCoords);
+    }
+  }
+
   if (!lat || !lon) {
     if (!owmSucceeded) {
       displayError(`Could not find weather data for "${query}". Please check spelling.`);
@@ -246,20 +305,15 @@ async function handleCitySearch(query, preferredCoords = null) {
     return;
   }
 
-  // If OWM did not succeed but geocoding did, show basic card info from Open-Meteo
-  if (!owmSucceeded) {
-    card.textContent = "";
-    card.style.display = "flex";
-    const cityDisplay = document.createElement("h1");
-    cityDisplay.textContent = destinationName;
-    cityDisplay.classList.add("cityDisplay");
-    card.appendChild(cityDisplay);
-  }
-
   // Step 3: Fetch 7-day detailed forecast from Open-Meteo
   try {
     const detailedForecast = await getDetailedForecast(lat, lon);
     currentDetailedForecast = detailedForecast;
+
+    // If OWM still did not succeed, populate all card fields from Open-Meteo current
+    if (!owmSucceeded && detailedForecast.current) {
+      displayWeatherInfoFromCurrent(destinationName || query, detailedForecast.current);
+    }
 
     // Render 7-day forecast cards
     renderForecast(detailedForecast);
