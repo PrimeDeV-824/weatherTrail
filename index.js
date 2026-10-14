@@ -11,7 +11,8 @@ import {
 } from "./js/weatherService.js";
 import {
   CURATED_DESTINATIONS,
-  fetchNearbyAttractions
+  fetchNearbyAttractions,
+  getCategoryFallback
 } from "./js/tourismService.js";
 import {
   evaluateWeatherRisks,
@@ -367,9 +368,10 @@ function renderAttractions(attractions, queryCity) {
     const cardEl = document.createElement("div");
     cardEl.className = "attractionCard";
 
-    const imgTag = attr.imageUrl
-      ? `<img src="${attr.imageUrl}" alt="${attr.name}" class="attractionImg" loading="lazy" />`
-      : `<div class="attractionImg" style="display:flex;align-items:center;justify-content:center;font-size:3rem;">🏛️</div>`;
+    const fallbackImg = getCategoryFallback(attr.category, attr.name);
+    const initialImg = attr.imageUrl || fallbackImg;
+
+    const imgTag = `<img src="${initialImg}" alt="${attr.name}" class="attractionImg" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg}';" />`;
 
     cardEl.innerHTML = `
       ${imgTag}
@@ -574,10 +576,12 @@ function initCuratedChips() {
     const chip = document.createElement("button");
     chip.type = "button";
     chip.className = "curatedChip";
-    chip.textContent = `${dest.name} (${dest.country})`;
+    const label = dest.country === "India" ? `${dest.name} (${dest.region})` : `${dest.name} (${dest.country})`;
+    chip.textContent = label;
     chip.addEventListener("click", () => {
       cityInput.value = dest.name;
       handleCitySearch(dest.name, { lat: dest.lat, lon: dest.lon });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
     curatedChips.appendChild(chip);
   });
