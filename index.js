@@ -425,7 +425,7 @@ function renderAttractions(attractions, queryCity) {
     const cardEl = document.createElement("div");
     cardEl.className = "attractionCard";
 
-    const fallbackImg = getCategoryFallback(attr.category, attr.name);
+    const fallbackImg = getCategoryFallback(attr.category, attr.name, queryCity || currentCityName);
     const initialImg = attr.imageUrl || fallbackImg;
 
     const imgTag = `<img src="${initialImg}" alt="${attr.name}" class="attractionImg" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${fallbackImg}';" />`;
