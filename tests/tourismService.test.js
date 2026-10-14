@@ -49,3 +49,32 @@ Deno.test("Tourism Service - Fallback generates custom SVG emblem instead of ran
   assert(decodeURIComponent(svgFallback).includes("Historic Gateway"), "Fallback SVG must contain landmark name");
   assert(decodeURIComponent(svgFallback).includes("Lucknow"), "Fallback SVG must contain city name");
 });
+
+Deno.test("Tourism Service - Agra Attractions have 100% Real Photographs", async () => {
+  const attractions = await fetchNearbyAttractions(27.1767, 78.0081, "Agra");
+  assertEquals(attractions.length, 4, "Must return 4 Agra attractions");
+
+  for (const attr of attractions) {
+    assert(attr.imageUrl && attr.imageUrl.startsWith("https://"), `${attr.name} must have a valid HTTPS image URL`);
+    assert(!attr.imageUrl.startsWith("data:image/svg+xml"), `${attr.name} must not fall back to SVG emblem`);
+    
+    // Check that HTTP status is 200
+    const res = await fetch(attr.imageUrl, { method: "HEAD", headers: { "User-Agent": "WeatherTrail/1.0" } });
+    assertEquals(res.status, 200, `${attr.name} image URL (${attr.imageUrl}) must return 200 OK`);
+  }
+});
+
+Deno.test("Tourism Service - Prayagraj Attractions have 100% Real Photographs", async () => {
+  const attractions = await fetchNearbyAttractions(25.4358, 81.8463, "Prayagraj");
+  assertEquals(attractions.length, 5, "Must return 5 Prayagraj attractions");
+
+  for (const attr of attractions) {
+    assert(attr.imageUrl && attr.imageUrl.startsWith("https://"), `${attr.name} must have a valid HTTPS image URL`);
+    assert(!attr.imageUrl.startsWith("data:image/svg+xml"), `${attr.name} must not fall back to SVG emblem`);
+    
+    // Check that HTTP status is 200
+    const res = await fetch(attr.imageUrl, { method: "HEAD", headers: { "User-Agent": "WeatherTrail/1.0" } });
+    assertEquals(res.status, 200, `${attr.name} image URL (${attr.imageUrl}) must return 200 OK`);
+  }
+});
+

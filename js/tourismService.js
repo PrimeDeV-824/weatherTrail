@@ -72,32 +72,27 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Triveni Sangam",
         category: "Spiritual",
-        description: "Holy confluence of the sacred Ganga, Yamuna, and mystical Saraswati rivers.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NorthIndiaCircuit_21.jpg/960px-NorthIndiaCircuit_21.jpg"
+        description: "Holy confluence of the sacred Ganga, Yamuna, and mystical Saraswati rivers."
       },
       {
         name: "Allahabad Fort",
         category: "Heritage",
-        description: "Imposing 1583 Mughal citadel built by Emperor Akbar housing the immortal Akshayavat tree.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Allahabad_Fort_from_Triveni_Sangam.jpg/960px-Allahabad_Fort_from_Triveni_Sangam.jpg"
+        description: "Imposing 1583 Mughal citadel built by Emperor Akbar housing the immortal Akshayavat tree."
       },
       {
         name: "Anand Bhavan",
         category: "History",
-        description: "Historic ancestral estate of the Nehru-Gandhi family turned national independence memorial.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Anand_Bhawan%2C_Allahabad.jpg/960px-Anand_Bhawan%2C_Allahabad.jpg"
+        description: "Historic ancestral estate of the Nehru-Gandhi family turned national independence memorial."
       },
       {
         name: "Khusro Bagh",
         category: "Heritage",
-        description: "Enclosed Mughal funerary garden with exquisite sandstone mausoleums of Prince Khusrau.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Tomb_of_Khusrau_Mirza.jpg/960px-Tomb_of_Khusrau_Mirza.jpg"
+        description: "Enclosed Mughal funerary garden with exquisite sandstone mausoleums of Prince Khusrau."
       },
       {
         name: "Alopi Devi Mandir",
         category: "Temple",
-        description: "Venerated Shakti Peeth shrine where the sanctum is represented by a sacred wooden carriage.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Alopi_Devi_Temple.jpg/960px-Alopi_Devi_Temple.jpg"
+        description: "Venerated Shakti Peeth shrine where the sanctum is represented by a sacred wooden carriage."
       }
     ]
   },
@@ -113,26 +108,22 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Taj Mahal",
         category: "Heritage",
-        description: "UNESCO World Wonder: the radiant ivory-white marble mausoleum on the Yamuna riverbank.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/960px-Taj_Mahal_%28Edited%29.jpeg"
+        description: "UNESCO World Wonder: the radiant ivory-white marble mausoleum on the Yamuna riverbank."
       },
       {
         name: "Agra Fort",
         category: "Heritage",
-        description: "Majestic red sandstone UNESCO fortress that served as the imperial seat of Mughal emperors.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Agra_Fort_in_India.jpg/960px-Agra_Fort_in_India.jpg"
+        description: "Majestic red sandstone UNESCO fortress that served as the imperial seat of Mughal emperors."
       },
       {
         name: "Fatehpur Sikri",
         category: "Heritage",
-        description: "Preserved 16th-century ghost city featuring the colossal 54m Buland Darwaza gateway.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Buland_Darwaza%2C_Fatehpur_Sikri.jpg/960px-Buland_Darwaza%2C_Fatehpur_Sikri.jpg"
+        description: "Preserved 16th-century ghost city featuring the colossal 54m Buland Darwaza gateway."
       },
       {
         name: "Mehtab Bagh",
         category: "Heritage",
-        description: "Moonlight charbagh garden across the river offering breathtaking sunset views of the Taj Mahal.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mehtab_Bagh_Agra.jpg/960px-Mehtab_Bagh_Agra.jpg"
+        description: "Moonlight charbagh garden across the river offering breathtaking sunset views of the Taj Mahal."
       }
     ]
   },
@@ -148,26 +139,22 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Kashi Vishwanath Temple",
         category: "Temple",
-        description: "Revered Jyotirlinga shrine dedicated to Lord Shiva with golden spire on the banks of Ganga.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kashi_Vishwanath_Temple_Varanasi.jpg/960px-Kashi_Vishwanath_Temple_Varanasi.jpg"
+        description: "Revered Jyotirlinga shrine dedicated to Lord Shiva with golden spire on the banks of Ganga."
       },
       {
         name: "Dashashwamedh Ghat",
         category: "Spiritual",
-        description: "The premier Ganga ghat renowned for the mesmerizing evening Maha Aarti ceremony.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Varanasi_Dashashwamedh_Ghat.jpg/960px-Varanasi_Dashashwamedh_Ghat.jpg"
+        description: "The premier Ganga ghat renowned for the mesmerizing evening Maha Aarti ceremony."
       },
       {
         name: "Assi Ghat",
         category: "Spiritual",
-        description: "Vibrant southern ghat popular for sunrise yoga, Subah-e-Banaras music, and Ganga boat tours.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Assi_Ghat_Varanasi.jpg/960px-Assi_Ghat_Varanasi.jpg"
+        description: "Vibrant southern ghat popular for sunrise yoga, Subah-e-Banaras music, and Ganga boat tours."
       },
       {
         name: "Sarnath",
         category: "Heritage",
-        description: "Sacred deer park where Gautama Buddha delivered his first sermon after enlightenment.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Dhamekh_Stupa_Sarnath.jpg/960px-Dhamekh_Stupa_Sarnath.jpg"
+        description: "Sacred deer park where Gautama Buddha delivered his first sermon after enlightenment."
       }
     ]
   },
@@ -181,28 +168,24 @@ export const CURATED_DESTINATIONS = [
     category: "Spiritual",
     highlights: [
       {
-        name: "Ram Mandir Ayodhya",
+        name: "Ram Mandir",
         category: "Temple",
-        description: "Grand Nagara-style stone temple marking the sacred Ram Janmabhoomi.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Ram_Mandir_Ayodhya.jpg/960px-Ram_Mandir_Ayodhya.jpg"
+        description: "Grand Nagara-style stone temple marking the sacred Ram Janmabhoomi."
       },
       {
-        name: "Hanuman Garhi Ayodhya",
+        name: "Hanuman Garhi Temple",
         category: "Temple",
-        description: "Fortress-like 10th-century shrine of Lord Hanuman perched above a 76-step staircase.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hanuman_Garhi_Ayodhya.jpg/960px-Hanuman_Garhi_Ayodhya.jpg"
+        description: "Fortress-like 10th-century shrine of Lord Hanuman perched above a 76-step staircase."
       },
       {
-        name: "Kanak Bhavan",
+        name: "Kanak Bhawan",
         category: "Temple",
-        description: "Splendid palace-temple gifted to Sita, adorned with gold-crowned deities.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kanak_Bhawan_Ayodhya.jpg/960px-Kanak_Bhawan_Ayodhya.jpg"
+        description: "Splendid palace-temple gifted to Sita, adorned with gold-crowned deities."
       },
       {
-        name: "Saryu River Ghats",
+        name: "Sarju",
         category: "Spiritual",
-        description: "Historic holy riverbank lined with ghats illuminated for the evening Saryu Aarti.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Saryu_Ghat_Ayodhya.jpg/960px-Saryu_Ghat_Ayodhya.jpg"
+        description: "Historic holy riverbank lined with ghats illuminated for the evening Saryu Aarti."
       }
     ]
   },
@@ -218,20 +201,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Bara Imambara",
         category: "Heritage",
-        description: "Monumental 1784 architectural marvel containing the intricate labyrinthine Bhulbhulaiya.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bara_Imambara_Lucknow.jpg/960px-Bara_Imambara_Lucknow.jpg"
+        description: "Monumental 1784 architectural marvel containing the intricate labyrinthine Bhulbhulaiya."
       },
       {
         name: "Chhota Imambara",
         category: "Heritage",
-        description: "Ornate Palace of Lights adorned with Belgian glass chandeliers and gilded domes.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Chhota_imambara_Lucknow.jpg/960px-Chhota_imambara_Lucknow.jpg"
+        description: "Ornate Palace of Lights adorned with Belgian glass chandeliers and gilded domes."
       },
       {
         name: "Rumi Darwaza",
         category: "Heritage",
-        description: "Colossal 60-foot Turkish gateway built by Nawab Asaf-ud-Daula in Awadhi architectural style.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Rumi_Darwaza_-_DSC2797-01.jpg/960px-Rumi_Darwaza_-_DSC2797-01.jpg"
+        description: "Colossal 60-foot Turkish gateway built by Nawab Asaf-ud-Daula in Awadhi architectural style."
       }
     ]
   },
@@ -247,20 +227,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Prem Mandir Vrindavan",
         category: "Temple",
-        description: "Magnificent Italian white marble temple complex depicting divine lilas with evening light shows.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Prem_Mandir%2C_Vrindavan_Night_View.jpg/960px-Prem_Mandir%2C_Vrindavan_Night_View.jpg"
+        description: "Magnificent Italian white marble temple complex depicting divine lilas with evening light shows."
       },
       {
         name: "Bankey Bihari Temple",
         category: "Temple",
-        description: "One of India's most beloved Krishna shrines renowned for its ecstatic bhakti atmosphere.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Bankey_Bihari_Temple_Vrindavan.jpg/960px-Bankey_Bihari_Temple_Vrindavan.jpg"
+        description: "One of India's most beloved Krishna shrines renowned for its ecstatic bhakti atmosphere."
       },
       {
         name: "Krishna Janmasthan Temple Complex",
         category: "Temple",
-        description: "Sacred site marking the historic prison cell where Lord Krishna manifested.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Krishna_Janmabhoomi_Temple_Mathura.jpg/960px-Krishna_Janmabhoomi_Temple_Mathura.jpg"
+        description: "Sacred site marking the historic prison cell where Lord Krishna manifested."
       }
     ]
   },
@@ -276,26 +253,22 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Rajdari Waterfall",
         category: "Waterfall",
-        description: "Stepped, roaring curtain waterfall inside Chandraprabha Wildlife Sanctuary in Chandauli.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Rajdari_falls.jpg/960px-Rajdari_falls.jpg"
+        description: "Stepped, roaring curtain waterfall inside Chandraprabha Wildlife Sanctuary in Chandauli."
       },
       {
         name: "Devdari Waterfall",
         category: "Waterfall",
-        description: "Picturesque multi-tier cascade and river canyon just downstream of Rajdari.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rajdari_1.jpg/960px-Rajdari_1.jpg"
-      },
-      {
-        name: "Wyndham Falls",
-        category: "Waterfall",
-        description: "Popular scenic natural waterfall and rock picnic retreat in the Mirzapur hill tracts.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wyndham_Falls_Mirzapur.jpg/960px-Wyndham_Falls_Mirzapur.jpg"
+        description: "Picturesque multi-tier cascade and river canyon just downstream of Rajdari."
       },
       {
         name: "Lakhaniya Dari Waterfall",
         category: "Waterfall",
-        description: "Spectacular 100m cascade tucked inside the rocky Vindhyan forest gorge near Mirzapur.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rajdari_1.jpg/960px-Rajdari_1.jpg"
+        description: "Spectacular 100m cascade tucked inside the rocky Vindhyan forest gorge near Mirzapur."
+      },
+      {
+        name: "Chunar Fort",
+        category: "Heritage",
+        description: "Ancient river-facing citadel on the banks of Ganga with deep mythological and Mughal history."
       }
     ]
   },
@@ -315,20 +288,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Dhuandhar Falls",
         category: "Waterfall",
-        description: "The famous 'Smoke Cascade' where the Narmada River plunges 30 meters through misty marble cliffs.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Dhuandhar_Falls_Bhedaghat.jpg/960px-Dhuandhar_Falls_Bhedaghat.jpg"
+        description: "The famous 'Smoke Cascade' where the Narmada River plunges 30 meters through misty marble cliffs."
       },
       {
-        name: "Marble Rocks Bhedaghat",
+        name: "Bhedaghat",
         category: "Nature",
-        description: "Stunning 100-foot white and colored marble gorge carved by the sapphire Narmada River.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Bhedaghat_Marble_Rocks.jpg/960px-Bhedaghat_Marble_Rocks.jpg"
+        description: "Stunning 100-foot white and colored marble gorge carved by the sapphire Narmada River."
       },
       {
-        name: "Chausath Yogini Temple Jabalpur",
+        name: "Chausath Yogini Temple, Bhedaghat",
         category: "Heritage",
-        description: "Ancient 10th-century circular hypaethral temple housing 64 Yogini carvings overlooking the river.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Chausath_Yogini_Temple_Jabalpur.jpg/960px-Chausath_Yogini_Temple_Jabalpur.jpg"
+        description: "Ancient 10th-century circular hypaethral temple housing 64 Yogini carvings overlooking the river."
       }
     ]
   },
@@ -342,22 +312,19 @@ export const CURATED_DESTINATIONS = [
     category: "Waterfall",
     highlights: [
       {
-        name: "Bee Falls Pachmarhi",
+        name: "Bee Falls",
         category: "Waterfall",
-        description: "Perennial 35-meter cascade providing pristine drinking water and natural rock showers.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Bee_Falls_Pachmarhi.jpg/960px-Bee_Falls_Pachmarhi.jpg"
-      },
-      {
-        name: "Dutchess Falls",
-        category: "Waterfall",
-        description: "Thrilling 100m cascade hidden in a deep, secluded valley reachable via a lush jungle trek.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Duchess_Falls_Pachmarhi.jpg/960px-Duchess_Falls_Pachmarhi.jpg"
+        description: "Perennial 35-meter cascade providing pristine drinking water and natural rock showers."
       },
       {
         name: "Dhoopgarh",
         category: "Nature",
-        description: "Highest point in Madhya Pradesh (1,352m) renowned for spectacular sunrise and sunset panoramas.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Dhoopgarh_Pachmarhi.jpg/960px-Dhoopgarh_Pachmarhi.jpg"
+        description: "Highest point in Madhya Pradesh (1,352m) renowned for spectacular sunrise and sunset panoramas."
+      },
+      {
+        name: "Pachmarhi",
+        category: "Nature",
+        description: "UNESCO Biosphere Reserve with prehistoric rock-art shelters, deep ravines, and wild greenery."
       }
     ]
   },
@@ -373,20 +340,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Chachai Falls",
         category: "Waterfall",
-        description: "Breathtaking 130m canyon drop on Bihad River, one of the tallest waterfalls in India.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Chachai_Falls_Rewa.jpg/960px-Chachai_Falls_Rewa.jpg"
+        description: "Breathtaking 130m canyon drop on Bihad River, one of the tallest waterfalls in India."
       },
       {
         name: "Keoti Falls",
         category: "Waterfall",
-        description: "Stunning 98m single-drop waterfall through deep red sandstone gorge.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Keoti_Falls_Rewa.jpg/960px-Keoti_Falls_Rewa.jpg"
+        description: "Stunning 98m single-drop waterfall through deep red sandstone gorge."
       },
       {
         name: "Bahuti Falls",
         category: "Waterfall",
-        description: "Madhya Pradesh's highest waterfall plummeting 198m down the Rewa plateau.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Bahuti_Falls_Rewa.jpg/960px-Bahuti_Falls_Rewa.jpg"
+        description: "Madhya Pradesh's highest waterfall plummeting 198m down the Rewa plateau."
       }
     ]
   },
@@ -406,32 +370,27 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Charlotte Lake",
         category: "Lake",
-        description: "Serene freshwater mountain lake supplying drinking water to Matheran, surrounded by dense jungle.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Charlotte_Lake_at_Matheran_-_panoramio.jpg/960px-Charlotte_Lake_at_Matheran_-_panoramio.jpg"
+        description: "Serene freshwater mountain lake supplying drinking water to Matheran, surrounded by dense jungle."
       },
       {
         name: "Panorama Point",
         category: "Hill Station",
-        description: "The 'Sunrise Point' offering an unrivaled 360-degree panorama of the Sahyadri mountains and Neral plains.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/MatheranPanoramaPointDrySeasonCrop.jpg/960px-MatheranPanoramaPointDrySeasonCrop.jpg"
+        description: "The 'Sunrise Point' offering an unrivaled 360-degree panorama of the Sahyadri mountains and Neral plains."
       },
       {
         name: "Louisa Point",
         category: "Hill Station",
-        description: "Edge-of-the-world cliff viewpoint providing dramatic vistas of Prabal Fort, waterfalls, and Vishalgad.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Panorama_from_Louisa_Point%2C_Matheran%2C_India.jpg/960px-Panorama_from_Louisa_Point%2C_Matheran%2C_India.jpg"
+        description: "Edge-of-the-world cliff viewpoint providing dramatic vistas of Prabal Fort, waterfalls, and Vishalgad."
       },
       {
         name: "Echo Point",
         category: "Hill Station",
-        description: "Famous acoustic cliff edge overlooking deep green valleys with cascading seasonal waterfalls.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Echo_Point_Matheran.jpg/960px-Echo_Point_Matheran.jpg"
+        description: "Famous acoustic cliff edge overlooking deep green valleys with cascading seasonal waterfalls."
       },
       {
         name: "One Tree Hill Point",
         category: "Hill Station",
-        description: "Iconic trekking point named after a lone majestic Jambhul tree standing atop the cliff.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/One_Tree_Hill_Point%2C_Matheran.jpg/960px-One_Tree_Hill_Point%2C_Matheran.jpg"
+        description: "Iconic trekking point named after a lone majestic Jambhul tree standing atop the cliff."
       }
     ]
   },
@@ -445,28 +404,24 @@ export const CURATED_DESTINATIONS = [
     category: "Waterfall",
     highlights: [
       {
-        name: "Kune Falls",
-        category: "Waterfall",
-        description: "Spectacular 200m 3-tiered waterfall set against the dramatic backdrop of Khandala hills.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Kune_Falls.jpg/960px-Kune_Falls.jpg"
-      },
-      {
-        name: "Tiger Point Lonavala",
-        category: "Hill Station",
-        description: "Cliff-edge viewpoint with a sheer drop of over 650 meters overlooking roaring valley cascades.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Tiger_Point%2C_Lonavala.jpg/960px-Tiger_Point%2C_Lonavala.jpg"
-      },
-      {
         name: "Bhushi Dam",
         category: "Waterfall",
-        description: "Iconic masonry dam where monsoon water cascades over tiered rock steps creating natural pools.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bhushi_Dam%2C_Lonavala.jpg/960px-Bhushi_Dam%2C_Lonavala.jpg"
+        description: "Iconic masonry dam where monsoon water cascades over tiered rock steps creating natural pools."
       },
       {
         name: "Karla Caves",
         category: "Heritage",
-        description: "Ancient 2nd-century BC Buddhist rock-cut cave shrines featuring a grand wooden-ribbed chaitya hall.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Karla_Caves_Great_Chaitya.jpg/960px-Karla_Caves_Great_Chaitya.jpg"
+        description: "Ancient 2nd-century BC Buddhist rock-cut cave shrines featuring a grand wooden-ribbed chaitya hall."
+      },
+      {
+        name: "Lohagad",
+        category: "Heritage",
+        description: "Historic hill fortress perched at 1,033m elevation with famous Vinchukata (scorpion's tail) ridge."
+      },
+      {
+        name: "Rajmachi",
+        category: "Heritage",
+        description: "Rugged twin-fort redoubt overlooking Bor Ghat trade route, draped in monsoon clouds and streams."
       }
     ]
   },
@@ -482,20 +437,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Thoseghar Waterfalls",
         category: "Waterfall",
-        description: "Roaring series of waterfalls ranging from 15m to 200m deep inside pristine Sahyadri forests.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Thoseghar_Waterfalls.jpg/960px-Thoseghar_Waterfalls.jpg"
+        description: "Roaring series of waterfalls ranging from 15m to 200m deep inside pristine Sahyadri forests."
       },
       {
         name: "Vajrai Waterfall",
         category: "Waterfall",
-        description: "One of India's tallest waterfalls plunging 560 feet across 3 tiers near Bhambavli.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vajrai_Waterfall_Satara.jpg/960px-Vajrai_Waterfall_Satara.jpg"
+        description: "One of India's tallest waterfalls plunging 560 feet across 3 tiers near Bhambavli."
       },
       {
         name: "Kaas Plateau",
         category: "Nature",
-        description: "UNESCO World Natural Heritage volcanic plateau carpeted in millions of wild seasonal blooms.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Kaas_Plateau_Flowers.jpg/960px-Kaas_Plateau_Flowers.jpg"
+        description: "UNESCO World Natural Heritage volcanic plateau carpeted in millions of wild seasonal blooms."
       }
     ]
   },
@@ -511,20 +463,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Randha Falls",
         category: "Waterfall",
-        description: "Mighty 45m waterfall where the Pravara River crashes into a deep ravine, creating misty spray.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Randha_Falls_Bhandardara.jpg/960px-Randha_Falls_Bhandardara.jpg"
+        description: "Mighty 45m waterfall where the Pravara River crashes into a deep ravine, creating misty spray."
       },
       {
         name: "Umbrella Falls Bhandardara",
         category: "Waterfall",
-        description: "Picturesque umbrella-shaped deluge formed when water spills from the Wilson Dam sluice gates.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Umbrella_Falls_Bhandardara.jpg/960px-Umbrella_Falls_Bhandardara.jpg"
+        description: "Picturesque umbrella-shaped deluge formed when water spills from the Wilson Dam sluice gates."
       },
       {
         name: "Bhivpuri Waterfalls Karjat",
         category: "Waterfall",
-        description: "Popular trekking cascade near Matheran / Karjat with natural swimming pools and rappelling cliffs.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bhivpuri_Waterfalls.jpg/960px-Bhivpuri_Waterfalls.jpg"
+        description: "Popular trekking cascade near Matheran / Karjat with natural swimming pools and rappelling cliffs."
       }
     ]
   },
@@ -540,20 +489,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Gateway of India",
         category: "Heritage",
-        description: "Iconic 26m Indo-Saracenic basalt triumphal arch overlooking the bustling Mumbai Harbour.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Gateway_of_India_Mumbai.jpg/960px-Gateway_of_India_Mumbai.jpg"
+        description: "Iconic 26m Indo-Saracenic basalt triumphal arch overlooking the bustling Mumbai Harbour."
       },
       {
-        name: "Marine Drive Mumbai",
+        name: "Marine Drive, Mumbai",
         category: "Coastal",
-        description: "World-famous 3.6km C-shaped coastal boulevard known as the Queen's Necklace.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Marine_Drive_Mumbai_Skyline.jpg/960px-Marine_Drive_Mumbai_Skyline.jpg"
+        description: "World-famous 3.6km C-shaped coastal boulevard known as the Queen's Necklace."
       },
       {
         name: "Elephanta Caves",
         category: "Heritage",
-        description: "UNESCO rock-cut cave temples on Elephanta Island dedicated to Lord Shiva's Trimurti.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Elephanta_Caves_Maheshmurti.jpg/960px-Elephanta_Caves_Maheshmurti.jpg"
+        description: "UNESCO rock-cut cave temples on Elephanta Island dedicated to Lord Shiva's Trimurti."
       }
     ]
   },
@@ -573,20 +519,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Dudhsagar Falls",
         category: "Waterfall",
-        description: "Four-tiered 'Sea of Milk' cascade (310m) on the Mandovi River with railway bridge crossing.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Dudhsagar_Falls_Goa.jpg/960px-Dudhsagar_Falls_Goa.jpg"
+        description: "Four-tiered 'Sea of Milk' cascade (310m) on the Mandovi River with railway bridge crossing."
       },
       {
         name: "Basilica of Bom Jesus",
         category: "Heritage",
-        description: "UNESCO Baroque church holding the sacred mortal remains of St. Francis Xavier.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Basilica_of_Bom_Jesus_Goa.jpg/960px-Basilica_of_Bom_Jesus_Goa.jpg"
+        description: "UNESCO Baroque church holding the sacred mortal remains of St. Francis Xavier."
       },
       {
         name: "Fort Aguada",
         category: "Heritage",
-        description: "17th-century Portuguese coastal fortress and lighthouse overlooking Sinquerim Beach.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Fort_Aguada_Goa.jpg/960px-Fort_Aguada_Goa.jpg"
+        description: "17th-century Portuguese coastal fortress and lighthouse overlooking Sinquerim Beach."
       }
     ]
   },
@@ -602,20 +545,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Athirappilly Falls",
         category: "Waterfall",
-        description: "The 'Niagara of India': magnificent 80ft wide curtain waterfall on the Chalakudy River.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Athirappilly_Waterfalls.jpg/960px-Athirappilly_Waterfalls.jpg"
+        description: "The 'Niagara of India': magnificent 80ft wide curtain waterfall on the Chalakudy River."
       },
       {
         name: "Vembanad Lake",
         category: "Nature",
-        description: "India's longest lake renowned for traditional kettuvallam houseboat cruises and snake boat races.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Vembanad_Lake_Kumarakom.jpg/960px-Vembanad_Lake_Kumarakom.jpg"
+        description: "India's longest lake renowned for traditional kettuvallam houseboat cruises and snake boat races."
       },
       {
-        name: "Munnar Tea Gardens",
+        name: "Munnar",
         category: "Hill Station",
-        description: "Emerald rolling tea plantations and mist-covered valleys in the Western Ghats.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Munnar_Tea_Plantations.jpg/960px-Munnar_Tea_Plantations.jpg"
+        description: "Emerald rolling tea plantations and mist-covered valleys in the Western Ghats."
       }
     ]
   },
@@ -631,20 +571,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Pangong Tso",
         category: "Lake",
-        description: "Endorheic Himalayan lake at 4,225m altitude that shifts from turquoise to deep cobalt.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Pangong_Tso_Ladakh.jpg/960px-Pangong_Tso_Ladakh.jpg"
+        description: "Endorheic Himalayan lake at 4,225m altitude that shifts from turquoise to deep cobalt."
       },
       {
         name: "Nubra Valley",
         category: "Nature",
-        description: "High-altitude cold desert featuring sand dunes and double-humped Bactrian camels.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Nubra_Valley_Hunder_Sand_Dunes.jpg/960px-Nubra_Valley_Hunder_Sand_Dunes.jpg"
+        description: "High-altitude cold desert featuring sand dunes and double-humped Bactrian camels."
       },
       {
         name: "Thiksey Monastery",
         category: "Spiritual",
-        description: "Twelve-story Tibetan Buddhist monastery resembling Lhasa's Potala Palace.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Thiksey_Monastery_Ladakh.jpg/960px-Thiksey_Monastery_Ladakh.jpg"
+        description: "Twelve-story Tibetan Buddhist monastery resembling Lhasa's Potala Palace."
       }
     ]
   },
@@ -658,22 +595,19 @@ export const CURATED_DESTINATIONS = [
     category: "Spiritual",
     highlights: [
       {
-        name: "Triveni Ghat Rishikesh",
+        name: "Triveni Ghat",
         category: "Spiritual",
-        description: "Sacred bathing ghat where pilgrims attend the radiant evening Maha Aarti.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Triveni_Ghat_Rishikesh.jpg/960px-Triveni_Ghat_Rishikesh.jpg"
+        description: "Sacred bathing ghat where pilgrims attend the radiant evening Maha Aarti."
       },
       {
         name: "Neer Garh Waterfall",
         category: "Waterfall",
-        description: "Hidden jade-colored natural jungle waterfall cascading over limestone cliffs.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Neer_Garh_Waterfall_Rishikesh.jpg/960px-Neer_Garh_Waterfall_Rishikesh.jpg"
+        description: "Hidden jade-colored natural jungle waterfall cascading over limestone cliffs."
       },
       {
         name: "Ram Jhula",
         category: "Heritage",
-        description: "Iconic iron suspension bridge spanning the sacred Ganges river with mountain views.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ram_Jhula_Rishikesh.jpg/960px-Ram_Jhula_Rishikesh.jpg"
+        description: "Iconic iron suspension bridge spanning the sacred Ganges river with mountain views."
       }
     ]
   },
@@ -693,20 +627,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Fushimi Inari-taisha",
         category: "Spiritual",
-        description: "Iconic shrine famous for its thousands of vibrant vermilion torii gates winding up the sacred mountain.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Fushimi_Inari_Taisha_torii_gates.jpg/960px-Fushimi_Inari_Taisha_torii_gates.jpg"
+        description: "Iconic shrine famous for its thousands of vibrant vermilion torii gates winding up the sacred mountain."
       },
       {
         name: "Kinkaku-ji",
         category: "Heritage",
-        description: "The world-famous Golden Pavilion, a Zen Buddhist temple whose top two floors are covered in pure gold leaf.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Kinkaku-ji_in_Kyoto.jpg/960px-Kinkaku-ji_in_Kyoto.jpg"
+        description: "The world-famous Golden Pavilion, a Zen Buddhist temple whose top two floors are covered in pure gold leaf."
       },
       {
         name: "Arashiyama Bamboo Grove",
         category: "Nature",
-        description: "Enchanting walking path surrounded by towering green bamboo stalks that sway in the breeze.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Arashiyama_Bamboo_Grove_Kyoto.jpg/960px-Arashiyama_Bamboo_Grove_Kyoto.jpg"
+        description: "Enchanting walking path surrounded by towering green bamboo stalks that sway in the breeze."
       }
     ]
   },
@@ -722,20 +653,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Eiffel Tower",
         category: "Heritage",
-        description: "World-famous 330m wrought-iron lattice tower on the Champ de Mars.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/960px-Tour_Eiffel_Wikimedia_Commons.jpg"
+        description: "World-famous 330m wrought-iron lattice tower on the Champ de Mars."
       },
       {
         name: "Louvre Museum",
         category: "Culture",
-        description: "World's most visited art museum, home to the Mona Lisa and Venus de Milo.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/960px-Louvre_Museum_Wikimedia_Commons.jpg"
+        description: "World's most visited art museum, home to the Mona Lisa and Venus de Milo."
       },
       {
         name: "Notre-Dame Cathedral",
         category: "Heritage",
-        description: "Masterpiece of French Gothic architecture on the Île de la Cité in Paris.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Notre-Dame_de_Paris_2013-07-24.jpg/960px-Notre-Dame_de_Paris_2013-07-24.jpg"
+        description: "Masterpiece of French Gothic architecture on the Île de la Cité in Paris."
       }
     ]
   },
@@ -751,20 +679,17 @@ export const CURATED_DESTINATIONS = [
       {
         name: "Central Park",
         category: "Nature",
-        description: "843-acre urban oasis with walking paths, lakes, castles, and lush greenery.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Central_Park_New_York_City.jpg/960px-Central_Park_New_York_City.jpg"
+        description: "843-acre urban oasis with walking paths, lakes, castles, and lush greenery."
       },
       {
         name: "Statue of Liberty",
         category: "Heritage",
-        description: "Colossal neoclassical sculpture on Liberty Island welcoming visitors to New York Harbor.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Statue_of_Liberty_7.jpg/960px-Statue_of_Liberty_7.jpg"
+        description: "Colossal neoclassical sculpture on Liberty Island welcoming visitors to New York Harbor."
       },
       {
         name: "Empire State Building",
         category: "Modern",
-        description: "Art Deco skyscraper in Midtown Manhattan offering panoramic observation deck views.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/960px-Empire_State_Building_%28aerial_view%29.jpg"
+        description: "Art Deco skyscraper in Midtown Manhattan offering panoramic observation deck views."
       }
     ]
   }
@@ -795,9 +720,51 @@ function isTitleRelevant(fileTitle = "", targetName = "", cityName = "") {
 }
 
 /**
+ * Validates whether a Wikipedia article extract is truly related to the target destination
+ * to prevent mismatch with unrelated geographical namesakes (e.g. Nebraska high point vs Matheran)
+ * or entertainment media (e.g. soap operas, albums, songs).
+ */
+export function isExtractRelevant(extract = "", name = "", cityName = "") {
+  if (!cityName) return true;
+  const lowerExt = extract.toLowerCase();
+  const lowerCity = cityName.toLowerCase();
+  const lowerName = name.toLowerCase();
+
+  // If extract explicitly references the searched city or region, 100% relevant
+  if (lowerExt.includes(lowerCity)) return true;
+
+  // Reject entertainment media articles (soap operas, television series, music albums)
+  if (
+    lowerExt.includes("soap opera") ||
+    lowerExt.includes("television series") ||
+    lowerExt.includes("album by") ||
+    lowerExt.includes("film directed by") ||
+    lowerExt.includes("single by") ||
+    lowerExt.includes("soundtrack")
+  ) {
+    return false;
+  }
+
+  // If generic landmark name (point, lake, falls, park) and mentions an unrelated foreign state/country
+  const genericWords = ["point", "lake", "park", "falls", "waterfall", "viewpoint", "fort", "dam"];
+  const isGeneric = genericWords.some((w) => lowerName.includes(w));
+  if (isGeneric && !lowerExt.includes(lowerCity)) {
+    const foreignIndicators = [
+      "nebraska", "california", "australia", "texas", "canada",
+      "united kingdom", "scotland", "ohio", "kansas", "new zealand"
+    ];
+    if (foreignIndicators.some((f) => lowerExt.includes(f))) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+/**
  * High-accuracy multi-tier image resolver:
- * Tier 1: Wikipedia PageImages with redirects=1 and normalization.
- * Tier 2: Wikipedia Article Embedded Files.
+ * Tier 1: Wikipedia PageImages with redirects=1 and destination relevance check.
+ * Tier 2: Wikipedia Article Embedded Files (e.g. for Bara Imambara).
  * Tier 3: Wikimedia Commons Live Photographic Search in namespace 6.
  * Tier 4: Zero-mismatch dynamic SVG landmark emblem.
  */
@@ -810,15 +777,19 @@ export async function fetchAccurateImage(name, cityName = "", category = "") {
     if (r1.ok) {
       const d1 = await r1.json();
       const p1 = Object.values(d1.query?.pages || {})[0];
-      if (p1 && p1.missing === undefined && p1.thumbnail?.source) {
+      const pExtract = p1?.extract || "";
+      const isRel = isExtractRelevant(pExtract, name, cityName);
+
+      if (p1 && p1.missing === undefined && p1.thumbnail?.source && isRel) {
         return {
           imageUrl: p1.thumbnail.source,
           url: p1.fullurl || `https://en.wikipedia.org/wiki/${encodeURIComponent(p1.title.replace(/ /g, "_"))}`,
-          extract: p1.extract || ""
+          extract: pExtract
         };
       }
-      // If page exists but no lead thumbnail, inspect embedded files on the page
-      if (p1 && p1.missing === undefined) {
+
+      // If page exists and is relevant, but no lead thumbnail, inspect embedded files on the page
+      if (p1 && p1.missing === undefined && isRel) {
         const u2 = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(p1.title)}&prop=images&imlimit=10&format=json&origin=*`;
         const r2 = await fetch(u2, { headers: { "Api-User-Agent": "WeatherTrail/1.0" } });
         if (r2.ok) {
@@ -845,7 +816,7 @@ export async function fetchAccurateImage(name, cityName = "", category = "") {
                 return {
                   imageUrl: info.thumburl || info.url,
                   url: p1.fullurl || `https://en.wikipedia.org/wiki/${encodeURIComponent(p1.title.replace(/ /g, "_"))}`,
-                  extract: p1.extract || ""
+                  extract: pExtract
                 };
               }
             }
@@ -898,18 +869,13 @@ export async function batchFetchWikipediaImages(items = [], cityName = "") {
   const map = {};
 
   const titlesToFetch = [];
+  const itemMap = {};
   for (const it of items) {
-    if (typeof it === "object" && it.imageUrl) {
-      map[it.name.toLowerCase()] = {
-        title: it.name,
-        thumbnail: it.imageUrl,
-        extract: it.description || null,
-        url: `https://en.wikipedia.org/wiki/${encodeURIComponent(it.name.replace(/ /g, "_"))}`
-      };
-    } else {
-      const name = typeof it === "string" ? it : it.name;
-      titlesToFetch.push(name);
-    }
+    const name = typeof it === "string" ? it : it.name;
+    const cat = typeof it === "object" ? it.category : "";
+    const desc = typeof it === "object" ? it.description : "";
+    titlesToFetch.push(name);
+    itemMap[name.toLowerCase()] = { name, category: cat, description: desc };
   }
 
   if (titlesToFetch.length > 0) {
@@ -934,16 +900,19 @@ export async function batchFetchWikipediaImages(items = [], cityName = "") {
         for (const p of Object.values(pages)) {
           if (!p || p.missing !== undefined) continue;
           const pTitle = p.title;
-          const entry = {
-            title: pTitle,
-            thumbnail: p.thumbnail?.source || null,
-            extract: p.extract || null,
-            url: p.fullurl || `https://en.wikipedia.org/wiki/${encodeURIComponent(pTitle.replace(/ /g, "_"))}`
-          };
+          const queryKey = redirectMap[pTitle.toLowerCase()] || pTitle.toLowerCase();
+          const targetName = itemMap[queryKey]?.name || pTitle;
 
-          map[pTitle.toLowerCase()] = entry;
-          if (redirectMap[pTitle.toLowerCase()]) {
-            map[redirectMap[pTitle.toLowerCase()]] = entry;
+          if (p.thumbnail?.source && isExtractRelevant(p.extract || "", targetName, cityName)) {
+            const entry = {
+              title: targetName,
+              thumbnail: p.thumbnail.source,
+              extract: p.extract || itemMap[queryKey]?.description || null,
+              url: p.fullurl || `https://en.wikipedia.org/wiki/${encodeURIComponent(pTitle.replace(/ /g, "_"))}`
+            };
+
+            map[queryKey] = entry;
+            map[pTitle.toLowerCase()] = entry;
           }
         }
       }
@@ -951,18 +920,24 @@ export async function batchFetchWikipediaImages(items = [], cityName = "") {
       console.warn("Wikipedia batch image fetch note:", err);
     }
 
-    // For any items still lacking thumbnails, resolve individually
-    for (const name of titlesToFetch) {
-      const key = name.toLowerCase();
-      if (!map[key] || !map[key].thumbnail) {
-        const resolved = await fetchAccurateImage(name, cityName);
-        map[key] = {
-          title: name,
-          thumbnail: resolved.imageUrl,
-          extract: map[key]?.extract || resolved.extract || null,
-          url: map[key]?.url || resolved.url
-        };
-      }
+    // Concurrent fallback for items lacking lead thumbnails
+    const missing = titlesToFetch.filter((name) => !map[name.toLowerCase()] || !map[name.toLowerCase()].thumbnail);
+    if (missing.length > 0) {
+      await Promise.all(
+        missing.map(async (name) => {
+          const key = name.toLowerCase();
+          const itCat = itemMap[key]?.category || "Point of Interest";
+          const resolved = await fetchAccurateImage(name, cityName, itCat);
+          if (resolved && resolved.imageUrl) {
+            map[key] = {
+              title: name,
+              thumbnail: resolved.imageUrl,
+              extract: map[key]?.extract || resolved.extract || itemMap[key]?.description || null,
+              url: map[key]?.url || resolved.url
+            };
+          }
+        })
+      );
     }
   }
 
@@ -1030,7 +1005,7 @@ export async function fetchNearbyAttractions(lat, lon, cityName = "") {
       const dist = calculateDistanceKm(lat, lon, item.lat, item.lon);
       let thumb = page.thumbnail?.source || null;
 
-      // If page has no lead thumbnail, resolve via Commons search for that specific attraction
+      // If page has no lead thumbnail, resolve via multi-tier search for that specific attraction
       if (!thumb) {
         const resolved = await fetchAccurateImage(title, cityName, "Point of Interest");
         thumb = resolved.imageUrl;
@@ -1054,7 +1029,7 @@ export async function fetchNearbyAttractions(lat, lon, cityName = "") {
       return await getCuratedFallback(cityName, lat, lon);
     }
 
-    // Prioritize attractions with real photo URLs
+    // Prioritize attractions with real photo URLs over SVG placeholders
     attractions.sort((a, b) => {
       const aIsSvg = a.imageUrl && a.imageUrl.startsWith("data:image/svg+xml");
       const bIsSvg = b.imageUrl && b.imageUrl.startsWith("data:image/svg+xml");
@@ -1086,7 +1061,7 @@ export async function getCuratedFallback(cityName, lat, lon) {
       const desc = typeof h === "string" ? `${name} in ${match.name}: ${match.tagline}` : h.description;
       const info = liveImages[name.toLowerCase()] || {};
 
-      const finalThumb = (typeof h === "object" && h.imageUrl) || info.thumbnail || getCategoryFallback(cat, name, match.name);
+      const finalThumb = info.thumbnail || getCategoryFallback(cat, name, match.name);
       const finalUrl = info.url || `https://en.wikipedia.org/wiki/${encodeURIComponent(name.replace(/ /g, "_"))}`;
       const finalDesc = info.extract || desc;
 
